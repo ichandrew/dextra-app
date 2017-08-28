@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DexFood</string>
+
+    <string name="btn_customize">Customizar</string>
+    <string name="btn_add_to_cart">Comprar</string>
+    <string name="btn_confirm">Confirmar</string>
+
+    <string name="tab_title1">Lanches</string>
+    <string name="tab_title2">Promoções</string>
+    <string name="tab_title3">Pedidos</string>
+
+    <string name="food_detail_title">Detalhes do Lanche</string>
+    <string name="food_custom_title">Customização de Lanche</string>
+
+    <string name="my_way">- do seu jeito</string>
+    <string name="success_add_cart">Você acabou de adicionar ao seu carrinho:</string>
+
+    <string name="empty_promotion">No momento a DexFood não possui promoções</string>
+    <string name="empty_foods">No momento a DexFood não possui lanches</string>
+    <string name="empty_cart">Você ainda não realizou pedidos</string>
+    <string name="empty_ingredients">Nenhum ingrediente encontrado</string>
+    <string name="total_lbl">Total:</string>
+
+    <string name="promo_light">Promoção Light</string>
+    <string name="promo_meat">Promoção Muita Carne</string>
+    <string name="promo_chease">Promoção Muito Queijo</string>
+</resources>

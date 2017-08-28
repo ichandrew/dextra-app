@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    tools:context="br.com.dexfood.dexfood.fooddetail.FoodDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/food_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/food_details_linear_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/food_details_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorPrice" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/food_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    tools:text="Nome do Lanche" />
+
+                <TextView
+                    android:id="@+id/food_details_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrice"
+                    android:textSize="15dp"
+                    tools:text="R$ 00,00" />
+
+                <TextView
+                    android:id="@+id/food_details_promotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    tools:text="Promoção Light"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/food_details_linear_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/food_details_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Customizar"
+                android:text="@string/btn_customize"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/food_details_add_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Comprar"
+                android:text="@string/btn_add_to_cart"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/food_details_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/food_details_linear_header"
+            android:layout_above="@id/food_details_linear_footer"
+            tools:listitem="@layout/food_details_list_view"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

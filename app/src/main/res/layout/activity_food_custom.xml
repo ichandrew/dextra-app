@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    tools:context="br.com.dexfood.dexfood.fooddetail.FoodDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/food_custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/food_custom_linear_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/food_custom_confirm_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Confirmar"
+                android:text="@string/btn_confirm" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/food_custom_linear_footer">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/food_custom_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/food_custom_list_view"/>
+
+            <ProgressBar
+                android:id="@+id/food_custom_progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="86dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/food_custom_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Nenhum Ingrediente Encontrado"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:padding="20dp"
+                android:text="@string/empty_ingredients"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

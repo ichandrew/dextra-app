@@ -1,0 +1,19 @@
+<resources>
+    <style name="DexFoodMaterialTheme" parent="DexFoodMaterialTheme.Base">
+
+    </style>
+
+    <style name="DexFoodMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#fdfff2</item>
+        <item name="android:editTextColor">#888</item>
+        <item name="android:textColor">#888</item>
+        <item name="colorControlNormal">#888</item>
+        <item name="colorControlActivated">#ff0043c5</item>
+        <item name="colorControlHighlight">#ffcb6345</item>
+    </style>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/cart_list_view_image"
+            android:contentDescription="@string/app_name"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/colorPrice"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cart_list_view_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/food_list_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                tools:text="Nome do Lanche" />
+
+            <TextView
+                android:id="@+id/food_list_view_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                tools:text="Ingredientes, Ingredientes, Ingredientes" />
+
+            <TextView
+                android:id="@+id/food_list_view_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrice"
+                tools:text="R$00,00" />
+
+        </LinearLayout>
+
+</RelativeLayout>

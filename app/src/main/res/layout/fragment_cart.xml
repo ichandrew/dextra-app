@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.dexfood.dexfood.promotions.PromotionsFragment">
+
+    <LinearLayout
+        android:id="@+id/cart_linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            tools:text="Total:"
+            android:text="@string/total_lbl" />
+
+        <TextView
+            android:id="@+id/cart_totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrice"
+            android:textSize="18dp"
+            tools:text=" R$ 00,00"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/cart_linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cart_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/cart_list_view" />
+
+        <ProgressBar
+            android:id="@+id/cart_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="86dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/cart_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nenhum Pedido no Momento"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:text="@string/empty_cart"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
